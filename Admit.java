@@ -11,6 +11,7 @@ import java.util.*; // so I can use Scanner
 public class Admit {
    public static void main(String[] args) {
       giveIntro();
+	hello
       Scanner console = new Scanner(System.in);
       System.out.println("Information for applicant #1:");
          double firstApp = App(console);
@@ -34,6 +35,8 @@ public class Admit {
       int satOrAct = console.nextInt();
       if (satOrAct == 1) {
          double satExam = askSat(console);
+
+	hello
          double gpaScore = askGpa(console);
          return round1(satExam + gpaScore);
       } else if (satOrAct == 2) {
@@ -82,6 +85,8 @@ public class Admit {
       System.out.print("   Max GPA? ");
       double maxGpa = console.nextDouble();
       System.out.print("   Transcript Multiplier? ");
+	hello
+	hello
       double transMulti = console.nextDouble();
       double gpaScore = finalGpa(overGpa, maxGpa, transMulti);
       System.out.println("   GPA Score = " + round1(gpaScore));
@@ -106,6 +111,9 @@ public class Admit {
    
    // Rounds n to 1 digits after the decimal point
    public static double round1(double n) {
+	hello
+	hello
+	hello
       return Math.round(n * 10.0) / 10.0;
    }
    
@@ -117,8 +125,10 @@ public class Admit {
          System.out.println("The first applicant seems to be better");
       } else if (firstApp < secondApp){
          System.out.println("The second applicant seems to be better");
+	hello
       } else {
          System.out.println("The two applicants seem to be equal");
       }
+	hello
    }
 }
